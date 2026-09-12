@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#144d34"/>
+      <stop offset="100%" stop-color="#0b2b1d"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fad02c"/>
+      <stop offset="100%" stop-color="#d48a1c"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#17b890"/>
+      <stop offset="100%" stop-color="#0e8065"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#skyGrad)"/>
+  <!-- Sun / Heritage Emblem -->
+  <circle cx="44" cy="20" r="7" fill="url(#goldGrad)" opacity="0.9"/>
+  <!-- Mountain Background -->
+  <polygon points="12,46 28,24 44,46" fill="#1f6947" opacity="0.6"/>
+  <!-- Mountain Foreground -->
+  <polygon points="22,46 38,18 54,46" fill="#29875c"/>
+  <!-- Water Waves / Lake Na Hang -->
+  <path d="M6,46 C16,43 24,49 34,46 C44,43 52,49 58,46 L58,54 C52,57 44,51 34,54 C24,57 16,51 6,54 Z" fill="url(#waterGrad)"/>
+  <circle cx="34" cy="38" r="3" fill="#ffffff" opacity="0.8"/>
+</svg>

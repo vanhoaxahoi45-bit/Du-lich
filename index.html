@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Metadata -->
+  <title>Du lịch Tuyên Quang | Khám phá miền di sản giữa đại ngàn</title>
+  <meta name="description" content="Khám phá Tuyên Quang qua những di tích lịch sử, hồ Na Hang – Lâm Bình, cao nguyên đá, bản làng, văn hóa và những hành trình giữa đại ngàn.">
+  <meta name="keywords" content="Du lịch Tuyên Quang, Hồ Na Hang, Khu di tích Tân Trào, Thác Bản Ba, Suối khoáng Mỹ Lâm, Lễ hội Thành Tuyên, Cao nguyên đá, Lũng Cú, Mã Pì Lèng, Sông Nho Quế, Hoàng Su Phì, Lô Lô Chải">
+  <meta name="author" content="Khám phá Tuyên Quang">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dulichtuyenquang.vn/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dulichtuyenquang.vn/">
+  <meta property="og:title" content="Du lịch Tuyên Quang | Khám phá miền di sản giữa đại ngàn">
+  <meta property="og:description" content="Khám phá Tuyên Quang qua những di tích lịch sử, hồ Na Hang – Lâm Bình, cao nguyên đá, bản làng, văn hóa và những hành trình giữa đại ngàn.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/7d/Cot_buoc_trau.jpg">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Du lịch Tuyên Quang | Khám phá miền di sản giữa đại ngàn">
+  <meta name="twitter:description" content="Khám phá vẻ đẹp thiên nhiên, lịch sử, văn hóa và những điểm đến ngoạn mục xứ Tuyên.">
+  <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/7/7d/Cot_buoc_trau.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Leaflet CSS (Free OpenStreetMap library, no API key required) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. NAVIGATION NAVBAR
+       ========================================================================== -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="#trang-chu" class="brand-logo" title="Trang chủ Du lịch Tuyên Quang">
+        <div class="logo-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="20" r="7" fill="#f5b041" opacity="0.9"/>
+            <polygon points="12,46 28,24 44,46" fill="#4ade80" opacity="0.7"/>
+            <polygon points="22,46 38,18 54,46" fill="#22c55e"/>
+            <path d="M6,46 C16,43 24,49 34,46 C44,43 52,49 58,46 L58,54 C52,57 44,51 34,54 C24,57 16,51 6,54 Z" fill="#2dd4bf"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">TUYÊN QUANG</span>
+          <span class="brand-sub">Miền di sản giữa đại ngàn</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="nav-menu" id="nav-menu">
+        <a href="#trang-chu" class="nav-link active">Trang chủ</a>
+        <a href="#gioi-thieu" class="nav-link">Giới thiệu</a>
+        <a href="#diem-den" class="nav-link">Điểm đến</a>
+        <a href="#trai-nghiem" class="nav-link">Trải nghiệm</a>
+        <a href="#van-hoa" class="nav-link">Văn hóa</a>
+        <a href="#am-thuc" class="nav-link">Ẩm thực</a>
+        <a href="#ban-do" class="nav-link">Bản đồ</a>
+        <a href="#lich-trinh" class="nav-link">Lịch trình</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#diem-den" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-compass"></i>
+          <span>Khám phá</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu điều hướng">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <header class="hero" id="trang-chu">
+    <div class="hero-bg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Cot_buoc_trau.jpg" alt="Thắng cảnh Cọc Vài Phạ sừng sững giữa lòng hồ sinh thái Na Hang Tuyên Quang" fetchpriority="high">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fa-solid fa-mountain"></i>
+          <span>Chào mừng đến với xứ Tuyên</span>
+        </div>
+        <h1 class="hero-title">TUYÊN QUANG</h1>
+        <p class="hero-subtitle">Miền di sản giữa đại ngàn</p>
+        <p class="hero-description">
+          Nơi lịch sử, thiên nhiên và những sắc màu văn hóa cùng tạo nên một hành trình đáng nhớ.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#diem-den" class="btn btn-primary">
+            <i class="fa-solid fa-compass"></i>
+            <span>Khám phá điểm đến</span>
+          </a>
+          <a href="#ban-do" class="btn btn-secondary">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Xem bản đồ</span>
+          </a>
+        </div>
+
+        <!-- Quick Statistics Ribbon -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">12<span>+</span></div>
+            <div class="stat-label">Điểm đến di sản tiêu biểu</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">22<span>+</span></div>
+            <div class="stat-label">Dân tộc anh em chung sống</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">01<span></span></div>
+            <div class="stat-label">Công viên địa chất UNESCO</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">8.000<span>+ ha</span></div>
+            <div class="stat-label">Mặt hồ sinh thái Na Hang</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. SECTION GIỚI THIỆU ("Chạm vào Tuyên Quang")
+       ========================================================================== -->
+  <section class="intro-section" id="gioi-thieu">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text-block">
+          <span class="intro-badge">Khám phá vùng đất huyền thoại</span>
+          <h2 class="intro-title">Chạm vào Tuyên Quang</h2>
+          <p class="intro-lead">
+            Vùng đất hội tụ lịch sử cách mạng hào hùng, kỳ quan thiên nhiên hoang sơ và bản sắc văn hóa các dân tộc anh em.
+          </p>
+          <p class="intro-desc">
+            Tuyên Quang là nơi hội tụ trọn vẹn vẻ đẹp của non nước hữu tình và dòng chảy lịch sử dân tộc. Từng là “Thủ đô Khu giải phóng”, vùng đất này lưu dấu những mốc son chói lọi của Cách mạng Tháng Tám. Không chỉ có những cánh rừng nguyên sinh bạt ngàn và lòng hồ sinh thái Na Hang – Lâm Bình ví như vịnh Hạ Long giữa cõi ngàn xanh, nơi đây còn mở ra những cung đường khám phá vùng cao kỳ vĩ, những nếp nhà sàn ấm cúng, tiếng Then đàn Tính sâu lắng và tấm lòng nồng hậu của 22 dân tộc anh em. Mỗi bước chân đến với Tuyên Quang là một lần chạm vào thiên nhiên thanh khiết và văn hóa ngàn đời.
+          </p>
+
+          <div class="intro-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-landmark"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Thủ đô Kháng chiến</h4>
+                <p>Khu di tích lịch sử Tân Trào vang danh non sông</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-water"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Hồ xanh giữa đại ngàn</h4>
+                <p>99 ngọn núi đá vôi nhấp nhô giữa mặt hồ ngọc bích</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-mountain-sun"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Kỳ quan vùng cao</h4>
+                <p>Cao nguyên đá, sông Nho Quế, cung đèo Mã Pì Lèng</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Sắc màu văn hóa</h4>
+                <p>Nếp sống thanh bình, lễ hội Thành Tuyên rực rỡ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-visual">
+          <div class="visual-card-main">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Around_Na_Hang%2C_near_Ba_Be_lake_%286223574117%29.jpg" alt="Rừng nguyên sinh đại ngàn Na Hang Tuyên Quang" loading="lazy">
+            <div class="visual-overlay-caption">
+              <h5>Đại ngàn Na Hang</h5>
+              <p>Hệ sinh thái rừng nguyên sinh và núi đá vôi hùng vĩ</p>
+            </div>
+          </div>
+
+          <div class="visual-floating-badge">
+            <div class="floating-badge-icon">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="floating-badge-text">
+              Du lịch sinh thái & Trải nghiệm cộng đồng bản địa
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. SECTION ĐỊA ĐIỂM NỔI BẬT ("Những nơi nhất định phải đến")
+       ========================================================================== -->
+  <section class="destinations-section" id="diem-den">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-location-dot"></i> Điểm đến tiêu biểu</span>
+        <h2 class="section-title">Những nơi nhất định phải đến</h2>
+        <p class="section-subtitle">
+          Khám phá danh sách 12 điểm đến đặc sắc nhất từ di tích lịch sử, cảnh sắc sinh thái đại ngàn đến những kỳ quan vùng cao ngoạn mục.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Tất cả điểm đến (12)</button>
+        <button class="filter-btn" data-filter="history">Di tích Lịch sử</button>
+        <button class="filter-btn" data-filter="nature">Sinh thái - Đại ngàn</button>
+        <button class="filter-btn" data-filter="highland">Kỳ quan Vùng cao</button>
+        <button class="filter-btn" data-filter="wellness">Nghỉ dưỡng & Sức khỏe</button>
+        <button class="filter-btn" data-filter="culture">Văn hóa & Lễ hội</button>
+      </div>
+
+      <!-- Destinations Grid (Populated dynamically from js/data.js) -->
+      <div class="destinations-grid" id="destinations-grid">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SECTION TRẢI NGHIỆM ("Trải nghiệm Tuyên Quang theo cách của bạn")
+       ========================================================================== -->
+  <section class="experiences-section" id="trai-nghiem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-compass"></i> Hành trình cá nhân hóa</span>
+        <h2 class="section-title">Trải nghiệm Tuyên Quang theo cách của bạn</h2>
+        <p class="section-subtitle">
+          Lựa chọn phong cách du lịch yêu thích để bắt đầu kỳ nghỉ trọn vẹn và giàu cảm xúc.
+        </p>
+      </div>
+
+      <!-- Experiences Grid (Populated dynamically) -->
+      <div class="experiences-grid" id="experiences-grid">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. SECTION VĂN HÓA & CON NGƯỜI ("Sắc màu miền di sản")
+       ========================================================================== -->
+  <section class="culture-section" id="van-hoa">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-masks-theater"></i> Bản sắc độc đáo</span>
+        <h2 class="section-title">Sắc màu miền di sản</h2>
+        <p class="section-subtitle">
+          Gặp gỡ những cộng đồng dân tộc giàu truyền thống: Tày, Dao, Mông, Sán Chay, Lô Lô cùng kho tàng dân ca, lễ hội và phong tục ngàn năm.
+        </p>
+      </div>
+
+      <!-- Culture Tabs Navigation -->
+      <div class="culture-tabs-wrapper">
+        <div class="culture-tabs-nav" id="culture-tabs-nav">
+          <!-- Rendered by js/main.js -->
+        </div>
+      </div>
+
+      <!-- Culture Detail Display -->
+      <div id="culture-detail-display">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. SECTION ẨM THỰC ("Hương vị Tuyên Quang")
+       ========================================================================== -->
+  <section class="cuisine-section" id="am-thuc">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-bowl-food"></i> Ẩm thực xứ Tuyên</span>
+        <h2 class="section-title">Hương vị Tuyên Quang</h2>
+        <p class="section-subtitle">
+          Thưởng thức những sản vật tinh túy kết tinh từ núi rừng và bàn tay khéo léo của người dân bản địa.
+        </p>
+      </div>
+
+      <!-- Cuisine Grid (Populated dynamically) -->
+      <div class="cuisine-grid" id="cuisine-grid">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. SECTION BẢN ĐỒ ("Bản đồ khám phá Tuyên Quang")
+       ========================================================================== -->
+  <section class="map-section" id="ban-do">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-map"></i> Định vị địa lý</span>
+        <h2 class="section-title">Bản đồ khám phá Tuyên Quang</h2>
+        <p class="section-subtitle">
+          Định vị trực quan các điểm đến chính trên bản đồ. Nhấp vào từng điểm để xem thông tin và mở đường đi trên Google Maps.
+        </p>
+      </div>
+
+      <div class="map-wrapper">
+        <!-- Interactive Leaflet Map Container -->
+        <div id="map-view"></div>
+
+        <!-- Destination Sidebar -->
+        <div class="map-sidebar">
+          <div class="map-sidebar-header">
+            <h3 class="map-sidebar-title">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <span>Danh sách địa điểm</span>
+            </h3>
+            <p class="map-sidebar-sub">Nhấp vào địa điểm để phóng to bản đồ</p>
+          </div>
+          <div class="map-locations-list" id="map-locations-list">
+            <!-- Rendered by js/main.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. SECTION GỢI Ý HÀNH TRÌNH ("Gợi ý hành trình")
+       ========================================================================== -->
+  <section class="itineraries-section" id="lich-trinh">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-route"></i> Lịch trình gợi ý</span>
+        <h2 class="section-title">Gợi ý hành trình</h2>
+        <p class="section-subtitle">
+          Tham khảo các lộ trình du lịch linh hoạt từ 1 đến 4 ngày được thiết kế tối ưu trải nghiệm tham quan.
+        </p>
+      </div>
+
+      <!-- Itinerary Tabs -->
+      <div class="itinerary-selector" id="itinerary-selector">
+        <!-- Rendered by js/main.js -->
+      </div>
+
+      <!-- Itinerary Detail Timeline -->
+      <div class="itinerary-display" id="itinerary-display">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. SECTION THƯ VIỆN ẢNH ("Tuyên Quang qua những khung hình")
+       ========================================================================== -->
+  <section class="gallery-section" id="thu-vien">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-images"></i> Thư viện hình ảnh</span>
+        <h2 class="section-title">Tuyên Quang qua những khung hình</h2>
+        <p class="section-subtitle">
+          Những góc nhìn chân thật và sống động về thiên nhiên kỳ thú, di tích lịch sử và đời sống thường nhật.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. SECTION CTA CUỐI TRANG
+       ========================================================================== -->
+  <section class="final-cta">
+    <div class="final-cta-bg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Cot_buoc_trau.jpg" alt="Toàn cảnh hồ Na Hang và đại ngàn núi đá vôi Tuyên Quang" loading="lazy">
+    </div>
+
+    <div class="container">
+      <div class="final-cta-content">
+        <h2 class="final-cta-title">Một Tuyên Quang, vạn hành trình để nhớ</h2>
+        <p class="final-cta-desc">
+          Hãy bắt đầu hành trình khám phá miền di sản giữa đại ngàn.
+        </p>
+        <a href="#diem-den" class="btn btn-gold btn-lg">
+          <i class="fa-solid fa-compass"></i>
+          <span>Khám phá ngay</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="brand-title">Khám phá Tuyên Quang</h3>
+          <span class="brand-sub">Miền di sản giữa đại ngàn</span>
+          <p class="footer-desc">
+            Website giới thiệu, quảng bá điểm đến và văn hóa Tuyên Quang. Lan tỏa tình yêu thiên nhiên, lịch sử và những giá trị nhân văn của vùng đất trung du miền núi phía Bắc.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Liên kết nhanh</h4>
+          <div class="footer-links">
+            <a href="#diem-den">Điểm đến</a>
+            <a href="#trai-nghiem">Trải nghiệm</a>
+            <a href="#van-hoa">Văn hóa</a>
+            <a href="#ban-do">Bản đồ</a>
+            <a href="#am-thuc">Ẩm thực</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Hành trình khám phá</h4>
+          <div class="footer-links">
+            <a href="#lich-trinh">Gợi ý 1 ngày - Lịch sử</a>
+            <a href="#lich-trinh">Gợi ý 2 ngày - Đại ngàn</a>
+            <a href="#lich-trinh">Gợi ý 4 ngày - Miền đá</a>
+            <a href="#thu-vien">Thư viện hình ảnh</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Thông tin & Lưu ý</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Bảo vệ môi trường tự nhiên và gìn giữ di tích văn hóa khi tham quan.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-heart"></i>
+            <span>Tôn trọng thuần phong mỹ tục của đồng bào các dân tộc bản địa.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-disclaimer-box">
+          <i class="fa-solid fa-circle-info"></i>
+          <strong>Lưu ý:</strong> Thông tin trên website mang tính giới thiệu, tham khảo. Website không đại diện và không tự nhận là cổng thông tin chính thức của cơ quan nhà nước.
+        </div>
+        <button class="back-to-top" id="back-to-top" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       13. MODAL CHI TIẾT ĐIỂM ĐẾN
+       ========================================================================== -->
+  <div class="modal-overlay" id="destination-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Đóng cửa sổ">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-media" id="modal-media-container">
+        <!-- Rendered by js/main.js -->
+      </div>
+
+      <div class="modal-content-body">
+        <span class="modal-category-badge" id="modal-badge">Di tích</span>
+        <h3 class="modal-title" id="modal-title">Tên địa điểm</h3>
+        <div class="modal-location" id="modal-location">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Vị trí</span>
+        </div>
+
+        <p class="modal-short-desc" id="modal-desc"></p>
+
+        <h4 class="modal-section-heading">
+          <i class="fa-solid fa-star"></i>
+          <span>Điểm nổi bật không thể bỏ lỡ</span>
+        </h4>
+        <div class="modal-highlights-list" id="modal-highlights">
+          <!-- Rendered by js/main.js -->
+        </div>
+
+        <div class="modal-tips-box" id="modal-tips">
+          <!-- Rendered by js/main.js -->
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modal-map-link">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>Mở chỉ đường trên Google Maps</span>
+          </a>
+          <span class="modal-credit-note" id="modal-credit"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       14. LIGHTBOX THƯ VIỆN ẢNH
+       ========================================================================== -->
+  <div class="lightbox-overlay" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-close" aria-label="Đóng thư viện">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="lightbox-img-wrapper">
+      <img src="" alt="" id="lightbox-img">
+    </div>
+    <div class="lightbox-caption">
+      <h4 id="lightbox-title"></h4>
+      <p id="lightbox-caption"></p>
+      <small id="lightbox-credit" style="opacity:0.75;display:block;margin-top:4px;"></small>
+    </div>
+  </div>
+
+  <!-- Leaflet JS Library (Free OpenStreetMap library, no API key required) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Data Script -->
+  <script src="js/data.js"></script>
+
+  <!-- Main Controller Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
